@@ -8,5 +8,11 @@ $db_name= 'orion_coding'; // the database we are connecting to
 //Connect to db
 $db_connect = @mysqli_connect($db_url,$db_user,$db_pw,$db_name);
 //If failed
-OR die('Could not connect to the server'. mysqli_connect_error());
+if (!$db_connect){
+'Could not connect to the server'. mysqli_connect_error();
+}
+else{
+	print"connection was a sucess";
+}
+
 ?>
